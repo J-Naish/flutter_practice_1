@@ -1,5 +1,5 @@
-
 import 'package:flutter/material.dart';
+import "./../constants/styles.dart";
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -9,6 +9,7 @@ class HomePage extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         title: const Text("Logo"),
+        backgroundColor: background,
       ),
       body: const Center(
         child: Placeholder(),
