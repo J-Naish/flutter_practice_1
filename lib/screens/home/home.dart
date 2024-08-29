@@ -6,10 +6,13 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const Row(
-      children: [
-        Placeholder(),
-      ],
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text("Logo"),
+      ),
+      body: const Center(
+        child: Placeholder(),
+      ),
     );
   }
 }
