@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../widgets/layout/header.dart';
 import '../../widgets/layout/tab_menu.dart';
+import '../../widgets/primitives/text_utilities.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -23,10 +24,7 @@ class HomePage extends StatelessWidget {
                     SizedBox(height: 32),
                     Padding(
                       padding: EdgeInsets.only(left: 128.0),
-                      child: Text(
-                        '人気のコンテンツ',
-                        style: TextStyle(fontSize: 24, fontWeight: FontWeight.bold)
-                      ),
+                      child: LargeTitle(title: '人気のコンテンツ'),
                     ),
                   ],
                 ),
