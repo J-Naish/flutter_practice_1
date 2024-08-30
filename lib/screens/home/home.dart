@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import "../../constants/styles.dart";
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -8,8 +7,30 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Logo"),
-        backgroundColor: background,
+        actions: [
+          TextButton(
+            onPressed: () {
+              Navigator.pushNamed(context, '/');
+            },
+            child: const Text(
+              'Home',
+              style: TextStyle(
+                color: Colors.black
+              )
+            ),
+          ),
+          TextButton(
+            onPressed: () {
+              Navigator.pushNamed(context, '/sign-in');
+            },
+            child: const Text(
+              'Sign In',
+              style: TextStyle(
+                color: Colors.black
+              )
+            ),
+          ),
+        ]
       ),
       body: const Center(
         child: Placeholder(),
