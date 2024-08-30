@@ -1,38 +1,14 @@
 import 'package:flutter/material.dart';
+import '../../widgets/header.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        actions: [
-          TextButton(
-            onPressed: () {
-              Navigator.pushNamed(context, '/');
-            },
-            child: const Text(
-              'Home',
-              style: TextStyle(
-                color: Colors.black
-              )
-            ),
-          ),
-          TextButton(
-            onPressed: () {
-              Navigator.pushNamed(context, '/sign-in');
-            },
-            child: const Text(
-              'Sign In',
-              style: TextStyle(
-                color: Colors.black
-              )
-            ),
-          ),
-        ]
-      ),
-      body: const Center(
+    return const Scaffold(
+      appBar: Header(),
+      body: Center(
         child: Placeholder(),
       ),
     );
