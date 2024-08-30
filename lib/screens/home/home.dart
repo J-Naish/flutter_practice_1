@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../../widgets/layout/header.dart';
+import '../../widgets/layout/tab_menu.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -9,7 +10,16 @@ class HomePage extends StatelessWidget {
     return const Scaffold(
       appBar: Header(height: 64),
       body: Center(
-        child: Placeholder(),
+        child: Column(
+          children: const [
+            TabMenu(),
+            Expanded(
+              child: Center(
+                child: Placeholder(),
+              ),
+            ),
+          ],
+        ),
       ),
     );
   }
