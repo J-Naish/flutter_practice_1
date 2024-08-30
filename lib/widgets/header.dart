@@ -70,7 +70,10 @@ class Header extends StatelessWidget implements PreferredSizeWidget {
                 borderRadius: BorderRadius.circular(20)
               ),
             ),
-            child: const Text('販売する'),
+            child: const Text(
+              '販売する',
+              style: TextStyle(color: Colors.white)
+            ),
           ),
         ),
         IconButton(
