@@ -7,7 +7,7 @@ class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const Scaffold(
-      appBar: Header(),
+      appBar: Header(height: 64),
       body: Center(
         child: Placeholder(),
       ),
