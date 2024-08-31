@@ -22,16 +22,19 @@ class HomePage extends StatelessWidget {
               child: Container(
                 width: double.infinity,
                 color: Colors.white,
-                child: const Column(
-                  crossAxisAlignment: CrossAxisAlignment.start,
-                  children: [
-                    SizedBox(height: 32),
-                    PopularContentsSection(),
-                    SizedBox(height: 32),
-                    PopularCategorySection(),
-                    SizedBox(height: 32),
-                    RecommendedContentsSection(),
-                  ],
+                child: const SingleChildScrollView(
+                  scrollDirection: Axis.vertical,
+                  child: Column(
+                    crossAxisAlignment: CrossAxisAlignment.start,
+                    children: [
+                      SizedBox(height: 32),
+                      PopularContentsSection(),
+                      SizedBox(height: 32),
+                      PopularCategorySection(),
+                      SizedBox(height: 32),
+                      RecommendedContentsSection(),
+                    ],
+                  ),
                 ),
               ),
             ),
