@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import '../primitives/logo.dart';
+import '../primitives/my_button.dart';
 
 class Header extends StatelessWidget implements PreferredSizeWidget {
   final double height;
@@ -62,18 +63,11 @@ class Header extends StatelessWidget implements PreferredSizeWidget {
                 icon: const Icon(Icons.notifications_outlined, color: Colors.black),
                 onPressed: () {},
               ),
-              Padding(
-                padding: const EdgeInsets.symmetric(vertical: 0),
-                child: ElevatedButton(
-                  onPressed: () {},
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.blue[700],
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(8)
-                    ),
-                  ),
-                  child: const Text('販売する', style: TextStyle(color: Colors.white)),
-                ),
+              const MyButton(
+                label: [
+                  Text("販売する", style: TextStyle(color: Colors.white)),
+                ],
+                onPressed: doNothing,
               ),
               IconButton(
                 onPressed: () {},
@@ -86,3 +80,5 @@ class Header extends StatelessWidget implements PreferredSizeWidget {
     );
   }
 }
+
+void doNothing() {}
