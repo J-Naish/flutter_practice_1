@@ -14,3 +14,5 @@ const textOnFill = tertiary;
 const error = Color(0xEC0000);
 const warning = Color(0xEC0000);
 const success = Color(0x00A86B);
+
+const horizontalPadding = 80.0;

@@ -8,8 +8,6 @@ import 'recommended_contents_section.dart';
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
-  static const horizontalPadding = 80.0;
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
