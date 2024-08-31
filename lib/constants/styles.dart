@@ -1,18 +1,20 @@
 import 'package:flutter/material.dart';
 
-const primary = Color(0x034AA6);
-const secondary = Color(0xBF4904);
-const tertiary = Color(0xFFFFFF);
-const quaternary = Color(0xD8D8DB);
-const quinary = Color(0x000000);
+class ColorConstants {
+  static const Color primary = Color(0x034AA6);
+  static const Color secondary = Color(0xBF4904);
+  static const Color tertiary = Color(0xFFFFFF);
+  static const Color quaternary = Color(0xD8D8DB);
+  static const Color quinary = Color(0x000000);
 
-const background = tertiary;
-const text = quinary;
-const textDescription = quaternary;
-const textOnFill = tertiary;
+  static const Color background = tertiary;
+  static const Color text = quinary;
+  static const Color textDescription = quaternary;
+  static const Color textOnFill = tertiary;
 
-const error = Color(0xEC0000);
-const warning = Color(0xEC0000);
-const success = Color(0x00A86B);
+  static const Color error = Color(0xEC0000);
+  static const Color warning = Color(0xEC0000);
+  static const Color success = Color(0x00A86B);
+}
 
 const horizontalPadding = 80.0;
