@@ -1,8 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../widgets/layout/header.dart';
 import '../../widgets/layout/tab_menu.dart';
-import '../../widgets/primitives/content_card.dart';
-import './section.dart';
+import './popular_contents_section.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -25,33 +24,7 @@ class HomePage extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     SizedBox(height: 32),
-                    Section(
-                      title:  '人気のセクション',
-                      child: Row(
-                        children: [
-                          ContentCard(
-                            title: 'タイトル',
-                            price: 1200,
-                            rating: 4.2,
-                            reviewCount: 120,
-                          ),
-                          SizedBox(width: 24),
-                          ContentCard(
-                            title: 'タイトル',
-                            price: 1200,
-                            rating: 4.2,
-                            reviewCount: 120,
-                          ),
-                          SizedBox(width: 24),
-                          ContentCard(
-                            title: 'タイトル',
-                            price: 1200,
-                            rating: 4.2,
-                            reviewCount: 120,
-                          ),
-                        ],
-                      )
-                    ),
+                    PopularContentsSection(),
                   ],
                 ),
               ),
