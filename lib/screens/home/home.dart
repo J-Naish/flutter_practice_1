@@ -1,8 +1,9 @@
 import 'package:flutter/material.dart';
 import '../../widgets/layout/header.dart';
 import '../../widgets/layout/tab_menu.dart';
-import './popular_contents_section.dart';
-import './pupular_category_section.dart';
+import 'popular_contents_section.dart';
+import 'popular_category_section.dart';
+import 'recommended_contents_section.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -28,6 +29,8 @@ class HomePage extends StatelessWidget {
                     PopularContentsSection(),
                     SizedBox(height: 32),
                     PopularCategorySection(),
+                    SizedBox(height: 32),
+                    RecommendedContentsSection(),
                   ],
                 ),
               ),
