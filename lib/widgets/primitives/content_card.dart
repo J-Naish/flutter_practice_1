@@ -1,18 +1,13 @@
 import 'package:flutter/material.dart';
 import '../../utils/helpers.dart';
+import '../../model/contents.dart';
 
 class ContentCard extends StatelessWidget {
-  final String title;
-  final int price;
-  final double rating;
-  final int reviewCount;
+  final Content content;
 
   const ContentCard({
     Key? key,
-    required this.title,
-    required this.price,
-    required this.rating,
-    required this.reviewCount
+    required this.content,
   }) : super(key: key);
 
   @override
@@ -53,7 +48,7 @@ class ContentCard extends StatelessWidget {
                     borderRadius: BorderRadius.circular(8),
                   ),
                   child: Text(
-                    getFormattedPrice(price),
+                    getFormattedPrice(content.price),
                     style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
                   ),
                 ),
@@ -66,7 +61,7 @@ class ContentCard extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Text(
-                  title,
+                  content.title,
                   style: const TextStyle(fontWeight: FontWeight.bold, fontSize: 16),
                   maxLines: 1,
                   overflow: TextOverflow.ellipsis,
@@ -76,14 +71,14 @@ class ContentCard extends StatelessWidget {
                   children: [
                     ...List.generate(5, (index) {
                       return Icon(
-                        index < rating.floor() ? Icons.star : Icons.star_border,
+                        index < content.rating.floor() ? Icons.star : Icons.star_border,
                         color: Colors.amber,
                         size: 16,
                       );
                     }),
                     const SizedBox(width: 4),
                     Text(
-                      '(${reviewCount.toString()})',
+                      '(${content.reviewCount.toString()})',
                       style: TextStyle(color: Colors.grey[600], fontSize: 12),
                     )
                   ],

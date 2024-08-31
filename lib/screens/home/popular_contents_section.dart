@@ -49,12 +49,7 @@ class PopularContentsSection extends StatelessWidget {
           children: popularContents.map((content) =>
             Padding(
               padding: const EdgeInsets.only(right: 16),
-              child: ContentCard(
-                title: content.title,
-                price: content.price,
-                rating: content.rating,
-                reviewCount: content.reviewCount,
-              ),
+              child: ContentCard(content: content),
             )
           ).toList(),
         ),

@@ -25,36 +25,16 @@ class RecommendedContentsSection extends StatelessWidget {
           padding: const EdgeInsets.only(bottom: 40),
           child: Row(
             children: [
-              ContentCard(
-                title: recommendedContents[i].title,
-                price: recommendedContents[i].price,
-                rating: recommendedContents[i].rating,
-                reviewCount: recommendedContents[i].reviewCount,
-              ),
+              ContentCard(content: recommendedContents[i]),
               const SizedBox(width: 72),
               if (i + 1 < recommendedContents.length)
-                ContentCard(
-                  title: recommendedContents[i + 1].title,
-                  price: recommendedContents[i + 1].price,
-                  rating: recommendedContents[i + 1].rating,
-                  reviewCount: recommendedContents[i + 1].reviewCount,
-                ),
+                ContentCard(content: recommendedContents[i + 1]),
               const SizedBox(width: 72),
               if (i + 2 < recommendedContents.length)
-                ContentCard(
-                  title: recommendedContents[i + 2].title,
-                  price: recommendedContents[i + 2].price,
-                  rating: recommendedContents[i + 2].rating,
-                  reviewCount: recommendedContents[i + 2].reviewCount,
-                ),
+                ContentCard(content: recommendedContents[i + 2]),
               const SizedBox(width: 72),
               if (i + 3 < recommendedContents.length)
-                ContentCard(
-                  title: recommendedContents[i + 3].title,
-                  price: recommendedContents[i + 3].price,
-                  rating: recommendedContents[i + 3].rating,
-                  reviewCount: recommendedContents[i + 3].reviewCount
-                )
+                ContentCard(content: recommendedContents[i + 3])
               else
                 const SizedBox(width: 16),
             ],
