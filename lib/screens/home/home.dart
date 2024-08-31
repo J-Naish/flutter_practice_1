@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import '../../widgets/layout/header.dart';
 import '../../widgets/layout/tab_menu.dart';
-import '../../widgets/primitives/text_utilities.dart';
 import '../../widgets/primitives/content_card.dart';
+import './section.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -11,7 +11,7 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(  // Removed const from here
+    return Scaffold(
       appBar: const Header(height: 64),
       body: Center(
         child: Column(
@@ -25,20 +25,33 @@ class HomePage extends StatelessWidget {
                   crossAxisAlignment: CrossAxisAlignment.start,
                   children: [
                     SizedBox(height: 32),
-                    Padding(
-                      padding: EdgeInsets.only(left: horizontalPadding, right: horizontalPadding),
-                      child: LargeTitle(title: '人気のコンテンツ'),
-                    ),
-                    SizedBox(height: 16),
-                    Padding(
-                      padding: EdgeInsets.only(left: horizontalPadding, right: horizontalPadding),
+                    Section(
+                      title:  '人気のセクション',
                       child: Row(
-                        mainAxisSize: MainAxisSize.max,
                         children: [
-                          ContentCard(title: "コンテンツ名", price: 12000, rating: 4, reviewCount: 138),
+                          ContentCard(
+                            title: 'タイトル',
+                            price: 1200,
+                            rating: 4.2,
+                            reviewCount: 120,
+                          ),
+                          SizedBox(width: 24),
+                          ContentCard(
+                            title: 'タイトル',
+                            price: 1200,
+                            rating: 4.2,
+                            reviewCount: 120,
+                          ),
+                          SizedBox(width: 24),
+                          ContentCard(
+                            title: 'タイトル',
+                            price: 1200,
+                            rating: 4.2,
+                            reviewCount: 120,
+                          ),
                         ],
-                      ),
-                    )
+                      )
+                    ),
                   ],
                 ),
               ),
