@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../../utils/helpers.dart';
 
 class ContentCard extends StatelessWidget {
   final String title;
@@ -52,7 +53,7 @@ class ContentCard extends StatelessWidget {
                     borderRadius: BorderRadius.circular(8),
                   ),
                   child: Text(
-                    '¥ ${price.toString()}',
+                    getFormattedPrice(price),
                     style: const TextStyle(color: Colors.white, fontWeight: FontWeight.bold),
                   ),
                 ),
