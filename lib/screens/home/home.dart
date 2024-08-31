@@ -7,6 +7,8 @@ import '../../widgets/primitives/content_card.dart';
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
 
+  static const horizontalPadding = 80.0;
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(  // Removed const from here
@@ -24,16 +26,19 @@ class HomePage extends StatelessWidget {
                   children: [
                     SizedBox(height: 32),
                     Padding(
-                      padding: EdgeInsets.only(left: 128.0),
+                      padding: EdgeInsets.only(left: horizontalPadding, right: horizontalPadding),
                       child: LargeTitle(title: '人気のコンテンツ'),
                     ),
                     SizedBox(height: 16),
-                    Row(
-                      mainAxisSize: MainAxisSize.max,
-                      children: [
-                        ContentCard(title: "コンテンツ名", price: 12000, rating: 4, reviewCount: 138),
-                      ],
-                    ),
+                    Padding(
+                      padding: EdgeInsets.only(left: horizontalPadding, right: horizontalPadding),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.max,
+                        children: [
+                          ContentCard(title: "コンテンツ名", price: 12000, rating: 4, reviewCount: 138),
+                        ],
+                      ),
+                    )
                   ],
                 ),
               ),
@@ -44,4 +49,3 @@ class HomePage extends StatelessWidget {
     );
   }
 }
-
