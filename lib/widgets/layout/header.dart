@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import '../primitives/logo.dart';
 
 class Header extends StatelessWidget implements PreferredSizeWidget {
   final double height;
@@ -18,20 +19,7 @@ class Header extends StatelessWidget implements PreferredSizeWidget {
           padding: const EdgeInsets.symmetric(horizontal: 16.0),
           child: Row(
             children: [
-              Container(
-                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-                decoration: BoxDecoration(
-                  color: Colors.blue[700],
-                  borderRadius: BorderRadius.circular(20)
-                ),
-                child: const Row(
-                  children: [
-                    Icon(Icons.star, color: Colors.white, size: 18),
-                    SizedBox(width: 4),
-                    Text('Logo', style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 16)),
-                  ],
-                ),
-              ),
+              const Logo(),
               const SizedBox(width: 4),
               TextButton.icon(
                 onPressed: () {},
