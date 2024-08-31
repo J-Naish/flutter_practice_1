@@ -22,6 +22,18 @@ const popularContents = [
     rating: 4.8,
     reviewCount: 180,
   ),
+  Content(
+    title: 'プログラミング講座',
+    price: 2000,
+    rating: 4.9,
+    reviewCount: 200,
+  ),
+  Content(
+    title: '英語学習講座',
+    price: 2200,
+    rating: 4.7,
+    reviewCount: 220,
+  ),
 ];
 
 class PopularContentsSection extends StatelessWidget {
