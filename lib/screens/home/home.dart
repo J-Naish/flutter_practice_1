@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import '../../widgets/layout/header.dart';
 import '../../widgets/layout/tab_menu.dart';
 import '../../widgets/primitives/text_utilities.dart';
+import '../../widgets/primitives/content_card.dart';
 
 class HomePage extends StatelessWidget {
   const HomePage({super.key});
@@ -26,6 +27,13 @@ class HomePage extends StatelessWidget {
                       padding: EdgeInsets.only(left: 128.0),
                       child: LargeTitle(title: '人気のコンテンツ'),
                     ),
+                    SizedBox(height: 16),
+                    Row(
+                      mainAxisSize: MainAxisSize.max,
+                      children: [
+                        ContentCard(title: "コンテンツ名", price: 12000, rating: 4, reviewCount: 138),
+                      ],
+                    ),
                   ],
                 ),
               ),
@@ -36,3 +44,4 @@ class HomePage extends StatelessWidget {
     );
   }
 }
+
