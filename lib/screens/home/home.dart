@@ -1,7 +1,6 @@
 import 'package:flutter/material.dart';
-import '../../widgets/layout/header.dart';
 import '../../widgets/layout/tab_menu.dart';
-import '../../widgets/layout/footer.dart';
+import '../../widgets/layout/screen_template.dart';
 import 'popular_contents_section.dart';
 import 'popular_category_section.dart';
 import 'recommended_contents_section.dart';
@@ -11,37 +10,16 @@ class HomePage extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: const Header(height: 64),
-      body: Center(
-        child: Column(
-          children: [
-            const TabMenu(),
-            Expanded(
-              child: Container(
-                width: double.infinity,
-                color: Colors.white,
-                child: const SingleChildScrollView(
-                  scrollDirection: Axis.vertical,
-                  child: Column(
-                    crossAxisAlignment: CrossAxisAlignment.start,
-                    children: [
-                      SizedBox(height: 32),
-                      PopularContentsSection(),
-                      SizedBox(height: 32),
-                      PopularCategorySection(),
-                      SizedBox(height: 32),
-                      RecommendedContentsSection(),
-                      SizedBox(height: 32),
-                      Footer(),
-                    ],
-                  ),
-                ),
-              ),
-            ),
-          ],
-        ),
-      ),
+    return const ScreenTemplate(
+      body: [
+        TabMenu(),
+        SizedBox(height: 32),
+        PopularContentsSection(),
+        SizedBox(height: 32),
+        PopularCategorySection(),
+        SizedBox(height: 32),
+        RecommendedContentsSection(),
+      ],
     );
   }
 }
