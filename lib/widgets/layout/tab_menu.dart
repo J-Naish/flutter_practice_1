@@ -39,7 +39,7 @@ class _TabMenuState extends State<TabMenu> with TickerProviderStateMixin {
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 50,
+      height: 48,
       decoration: const BoxDecoration(
         color: Colors.white,
         border: Border(

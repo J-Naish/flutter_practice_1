@@ -1,9 +1,8 @@
 import 'package:flutter/material.dart';
 import 'header.dart';
-import 'footer.dart';
 
 class ScreenTemplate extends StatelessWidget {
-  final List<Widget> body;
+  final Widget body;
 
   const ScreenTemplate({
     Key? key,
@@ -15,18 +14,11 @@ class ScreenTemplate extends StatelessWidget {
     return Scaffold(
       backgroundColor: Colors.white,
       appBar: const Header(),
-      body: Expanded(
-        child: SingleChildScrollView(
-          scrollDirection: Axis.vertical,
-          child: Column(
-            crossAxisAlignment: CrossAxisAlignment.start,
-            children: [
-              ...body,
-              const Footer(),
-            ],
-          ),
-        )
-      ),
+      body: Column(
+        children: [
+          Expanded(child: body),
+        ],
+      )
     );
   }
 }

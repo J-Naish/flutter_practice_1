@@ -7,9 +7,7 @@ class SignInPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const ScreenTemplate(
-      body: [
-        Placeholder(),
-      ]
+      body: Placeholder(),
     );
   }
 }
