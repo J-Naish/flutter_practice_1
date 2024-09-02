@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 import '../../widgets/layout/screen_template.dart';
+import '../../widgets/layout/footer.dart';
+import 'sign_in_form.dart';
 
 class SignInPage extends StatelessWidget {
   const SignInPage({super.key});
@@ -7,7 +9,17 @@ class SignInPage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const ScreenTemplate(
-      body: Placeholder(),
+      body: SingleChildScrollView(
+        scrollDirection: Axis.vertical,
+        child: Center(
+          child: Column(
+            children: [
+              SignInForm(),
+              Footer(),
+            ],
+          ),
+        ),
+      ),
     );
   }
 }
