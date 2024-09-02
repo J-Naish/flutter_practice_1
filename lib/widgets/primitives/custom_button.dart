@@ -9,6 +9,7 @@ class CustomButtonTheme {
 class CustomButton extends StatelessWidget {
   final String label;
   final String theme;
+  final double? width;
   final VoidCallback? onPressed;
 
 
@@ -16,13 +17,14 @@ class CustomButton extends StatelessWidget {
     Key? key,
     required this.label,
     required this.theme,
+    this.width,
     this.onPressed,
   }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {
     return SizedBox(
-      width: double.infinity,
+      width: width != null ? width : double.infinity,
       child: ElevatedButton(
         onPressed: onPressed,
         style: ButtonStyle(
