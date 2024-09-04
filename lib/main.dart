@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
-import './screens/home/home.dart';
+import 'screens/home/home.dart';
 import 'screens/sign-in/sign_in.dart';
+import 'screens/content/detail/content_detail.dart';
+import 'model/contents.dart';
 
 void main() {
   runApp(const MyApp());
@@ -20,8 +22,9 @@ class MyApp extends StatelessWidget {
       ),
       initialRoute: '/',
       routes: {
-        '/': (context) => const SignInPage(),
+        '/': (context) => const HomePage(),
         '/sign-in': (context) => const SignInPage(),
+        // '/content-detail': (context) => const ContentDetail(content: popularContents[0]),
       },
     );
   }
